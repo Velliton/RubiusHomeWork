@@ -5,17 +5,17 @@ namespace WordCounterApp.FileProcessing
     public static class WordCounter
     {
         
-        public static int CountWordsByFullRead(string filePath)
+        public static async Task <int> CountWordsByFullRead(string filePath)
         {
-            string content = FileReader.ReadAllText(filePath);
+            string content = await FileReader.ReadAllTextAsync(filePath);
             return RegexUtils.CountWords(content);
         }
 
        
-        public static int CountWordsByStream(string filePath)
+        public static async Task <int> CountWordsByStream(string filePath)
         {
             int wordCount = 0;
-            foreach (var line in FileReader.ReadLines(filePath))
+           await foreach (var line in FileReader.ReadLinesAsync(filePath))
             {
                 wordCount += RegexUtils.CountWords(line);
             }
