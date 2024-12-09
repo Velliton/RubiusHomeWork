@@ -4,13 +4,13 @@ namespace PingPongApp
 {
     public class Ping
     {
-        public event Action OnPing; // Событие для отправки "пинга"
+        public event Action OnPing; 
 
         public void ReceivePong()
         {
             Console.WriteLine("Ping получил Pong");
-            // Генерация случайного числа: посылать событие или "промахнуться"
-            if (new Random().Next(0, 2) == 0) // 0 - "промах", 1 - "успех"
+            
+            if (new Random().Next(0, 2) == 0) 
             {
                 Console.WriteLine("Ping промахнулся! Победил Pong");
                 return;
@@ -20,7 +20,7 @@ namespace PingPongApp
         }
         public void SendPing()
         {
-            OnPing?.Invoke(); // Безопасный вызов события
+            OnPing?.Invoke(); 
         }
     }
 }
