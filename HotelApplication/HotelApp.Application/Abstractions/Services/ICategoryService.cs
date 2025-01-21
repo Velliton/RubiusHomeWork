@@ -8,19 +8,19 @@ using HotelApp.Application.Models;
 
 namespace HotelApp.Application.Abstractions.Services
 {
-    public interface IClientService
+    public interface ICategoryService
     {
         /// <summary>
         /// Возвращает список клиентов
         /// </summary>
         /// <returns></returns>
-        Task<IReadOnlyCollection<ClientDto>> GetClients();
+        Task<IReadOnlyCollection<CategoryDto>> GetCategories();
 
-        Task<ClientDto> GetById(long id);
+        Task<CategoryDto> GetById(long id);
 
-        Task<long> Create(ClientDto client);
+        Task<long> Create(CategoryDto category);
         Task Delete(long id);
 
-        Task Update(ClientDto client);   
+        Task Update(CategoryDto category);
     }
 }

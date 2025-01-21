@@ -37,5 +37,14 @@ namespace HotelApp.Application.Services
             var result = await clientRepository.GetClients();
             return mapper.Map<IReadOnlyCollection<ClientDto>>(result);
         }
+
+        public async Task Update (ClientDto client)
+        {
+            var entity = mapper.Map<Client>(client);
+            await clientRepository.Update(entity);
+            return;
+        }
+
+
     }
 }

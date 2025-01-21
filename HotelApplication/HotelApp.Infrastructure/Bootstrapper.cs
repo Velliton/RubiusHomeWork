@@ -14,6 +14,11 @@ namespace HotelApp.Infrastructure
                 options.UseNpgsql(connectionString));
 
             services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IBookingRepository, BookingRepository>();
+            services.AddScoped<IRoomRepository, RoomRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
+            services.AddScoped<IBookingServRepository, BookingServRepository>();
 
             return services;
         }

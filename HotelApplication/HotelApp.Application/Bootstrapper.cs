@@ -17,7 +17,11 @@ namespace HotelApp.Application
         {
             services.AddAutoMapper(typeof (ApplicationMappingProfile));
             services.AddScoped<IClientService, ClientService>();
-
+            services.AddScoped<IBookingService, BookingService>();
+            services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IBookingServService, BookingServService>();
             return services;
         }
     }

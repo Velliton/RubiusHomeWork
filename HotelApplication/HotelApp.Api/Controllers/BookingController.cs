@@ -7,7 +7,7 @@ namespace HotelApp.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ClientsController(IClientService clientService) : ControllerBase
+    public class BookingController(IBookingService bookingService) : ControllerBase
     {
 
         /// <summary>
@@ -16,32 +16,32 @@ namespace HotelApp.Api.Controllers
 
 
         [HttpGet]
-        public Task<IReadOnlyCollection<ClientDto>> Get()
+        public Task<IReadOnlyCollection<BookingDto>> Get()
         {
-            return clientService.GetClients();
+            return bookingService.GetBookings();
         }
         [HttpGet("{id}")]
-        public Task<ClientDto> GetById(long id)
+        public Task<BookingDto> GetById(long id)
         {
-            return clientService.GetById(id);
+            return bookingService.GetById(id);
         }
 
         [HttpPost]
-        public Task<long> Create(ClientDto client)
+        public Task<long> Create(BookingDto booking)
         {
-            return clientService.Create(client);
+            return bookingService.Create(booking);
 
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateClient(long id, [FromBody] ClientDto clientDto)
+        public async Task<IActionResult> UpdateBooking(long id, [FromBody] BookingDto bookingDto)
         {
-            if (id != clientDto.ClientId)
+            if (id != bookingDto.BookingId)
             {
                 return BadRequest("Идентификатор клиента в URL не совпадает с данными.");
             }
 
-            await clientService.Update(clientDto);
+            await bookingService.Update(bookingDto);
             return NoContent();
         }
 

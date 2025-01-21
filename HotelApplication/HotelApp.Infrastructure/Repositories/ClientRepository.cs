@@ -36,5 +36,18 @@ namespace HotelApp.Infrastructure.Repositories
             var result = await dbContext.Clients.ToListAsync();
             return result.AsReadOnly();
         }
+
+        public async Task Update(Client client) 
+        {
+            var existingClient = await dbContext.Clients
+                .FirstOrDefaultAsync(x=> x.ClientId == client.ClientId)
+                ?? throw new NotFoundException($"Клиент с идентификатором {client.ClientId} не найден");
+            existingClient.FullName = client.FullName;
+            existingClient.Email = client.Email;
+            existingClient.Phone = client.Phone;
+
+            await dbContext.SaveChangesAsync();
+        }
+
     }
 }

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Application.Abstractions.Repositories
 {
-    public interface IClientRepository
+    public interface IBookingRepository
     {
-        Task<IReadOnlyCollection<Client>> GetClients();
+        Task<IReadOnlyCollection<Booking>> GetBookings();
 
-        Task<Client> GetById(long id);
+        Task<Booking> GetById(long id);
 
-        Task<long> Create(Client client);
+        Task<long> Create(Booking booking);
         Task Delete(long id);
 
-        Task Update(Client client);
+        Task Update(Booking booking);
     }
 }

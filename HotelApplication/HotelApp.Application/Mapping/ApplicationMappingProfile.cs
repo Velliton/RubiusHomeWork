@@ -16,6 +16,21 @@ namespace HotelApp.Application.Mapping
         {
             CreateMap<Client, ClientDto>();
             CreateMap<ClientDto, Client>();
+
+            CreateMap<Booking, BookingDto>();
+            CreateMap<BookingDto, Booking>();
+
+            CreateMap<Room, RoomDto>();
+            CreateMap<RoomDto, Room>();
+
+            CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryDto, Category>();
+
+            CreateMap<Service, ServiceDto>();
+            CreateMap<ServiceDto, Service>();
+
+            CreateMap<BookingService, BookingServiceDto>();
+            CreateMap<BookingServiceDto, BookingService>();
         } 
 
     }
