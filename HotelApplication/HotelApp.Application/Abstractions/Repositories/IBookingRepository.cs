@@ -17,5 +17,8 @@ namespace HotelApp.Application.Abstractions.Repositories
         Task Delete(long id);
 
         Task Update(Booking booking);
+
+        Task<IEnumerable<Booking>> GetBookingsByRoomIdAsync(int roomId);
+
     }
 }

@@ -52,5 +52,9 @@ namespace HotelApp.Infrastructure.Repositories
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<Booking>> GetBookingsByRoomIdAsync(int roomId)
+        {
+            return await dbContext.Bookings.Where(b => b.RoomId == roomId).ToListAsync();
+        }
     }
 }

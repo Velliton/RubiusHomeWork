@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HotelApp.Domain
 {
     /// <summary>
-    /// Комната
+    /// Класс для работы с комнатами
     /// </summary>
     public record Room
     {

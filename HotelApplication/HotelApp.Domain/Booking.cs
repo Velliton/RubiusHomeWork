@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Domain
 {
+    /// <summary>
+    /// Класс для работы с бронированиями
+    /// </summary>
     public record Booking
     {
-        public long BookingId { get; set; } // Первичный ключ
-        public int ClientId { get; set; } // Внешний ключ на клиента
-        public int RoomId { get; set; } // Внешний ключ на номер
-        public DateTime CheckInDate { get; set; } // Дата заезда
-        public DateTime CheckOutDate { get; set; } // Дата выезда
-        public decimal TotalPrice { get; set; } // Общая стоимость
+        /// <summary>
+        /// Первичный ключ
+        /// </summary>
+        public long BookingId { get; set; } 
+        /// <summary>
+        /// Внешний ключ на клиента
+        /// </summary>
+        public int ClientId { get; set; } 
+        /// <summary>
+        /// Внешний ключ на номер
+        /// </summary>
+        public int RoomId { get; set; } 
+        /// <summary>
+        /// Дата заезда
+        /// </summary>
+        public DateTime CheckInDate { get; set; } 
+        /// <summary>
+        /// Дата выезда
+        /// </summary>
+        public DateTime CheckOutDate { get; set; } 
+        /// <summary>
+        /// Общая стоимость
+        /// </summary>
+        public decimal TotalPrice { get; set; } 
     }
 }

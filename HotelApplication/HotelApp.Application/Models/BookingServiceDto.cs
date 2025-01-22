@@ -6,14 +6,26 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Application.Models
 {
+    /// <summary>
+    /// Сокращённая информация о сервисах для бронирования
+    /// </summary>
     public record BookingServiceDto
     {
         /// <summary>
         /// Идентификатор.
         /// </summary>
-        public long BookingServiceId { get; set; } // Первичный ключ
-        public long BookingId { get; set; } // Внешний ключ на бронирование
-        public long ServiceId { get; set; } // Внешний ключ на услугу
-        public int Quantity { get; set; } // Количество услуг
+        public long BookingServiceId { get; set; }
+        /// <summary>
+        /// Внешний ключ на бронирование
+        /// </summary>
+        public long BookingId { get; set; } 
+        /// <summary>
+        /// Внешний ключ на услугу
+        /// </summary>
+        public long ServiceId { get; set; }
+        /// <summary>
+        ///  Количество услуг
+        /// </summary>
+        public int Quantity { get; set; } 
     }
 }

@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Application.Models
 {
+    /// <summary>
+    /// Сокращённая информация о категориях номеров
+    /// </summary>
     public record CategoryDto
     {
-        public long CategoryId { get; set; } // Первичный ключ
-        public string CategoryName { get; set; } // Название категории
-        public decimal PricePerNight { get; set; } // Стоимость за ночь
+        /// <summary>
+        ///  Первичный ключ
+        /// </summary>
+        public long CategoryId { get; set; } 
+        /// <summary>
+        /// Название категории
+        /// </summary>
+        public string CategoryName { get; set; } 
+        /// <summary>
+        /// Стоимость за ночь
+        /// </summary>
+        public decimal PricePerNight { get; set; } 
     }
 }

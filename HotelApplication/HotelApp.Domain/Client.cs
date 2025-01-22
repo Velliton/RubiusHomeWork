@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HotelApp.Domain
 
 /// <summary>
-/// Клиент.
+/// Класс для работы с клиентами.
 /// </summary>
 {
     public record Client
@@ -17,19 +17,21 @@ namespace HotelApp.Domain
         /// </summary>
         public long ClientId { get; set; }
         /// <summary>
-        /// FullName.
+        /// Полное имя.
         /// </summary>
         public string FullName { get; set; }
         /// <summary>
-        /// Phone.
+        /// Телефон.
         /// </summary>
         public string Phone { get; set; }
         /// <summary>
-        /// Email.
+        /// Почта.
         /// </summary>
         public string Email { get; set; } // Почта
 
-
+        /// <summary>
+        /// Навигационное свойство
+        /// </summary>
         public ICollection<Booking>? Bookings { get; set; }
     }
 }

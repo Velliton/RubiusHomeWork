@@ -16,6 +16,6 @@ namespace HotelApp.Application.Abstractions.Repositories
         Task<long> Create(Service service);
         Task Delete(long id);
 
-        Task<long> Update(Service service);
+        Task Update(Service service);
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Application.Models
 {
+    /// <summary>
+    /// Краткая информация о номерах
+    /// </summary>
     public record RoomDto
     {
         /// <summary>

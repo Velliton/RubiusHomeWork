@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Application.Models
 {
+    /// <summary>
+    /// Краткая информация о клиентах
+    /// </summary>
     public record ClientDto
     {
         /// <summary>
@@ -13,16 +16,16 @@ namespace HotelApp.Application.Models
         /// </summary>
         public long ClientId { get; set; }
         /// <summary>
-        /// FullName.
+        /// Полное имя.
         /// </summary>
         public string FullName { get; set; }
         /// <summary>
-        /// Phone.
+        /// Телефон
         /// </summary>
         public string Phone { get; set; }
         /// <summary>
-        /// Email.
+        /// Почта
         /// </summary>
-        public string Email { get; set; } // Почта
+        public string Email { get; set; } 
     }
 }

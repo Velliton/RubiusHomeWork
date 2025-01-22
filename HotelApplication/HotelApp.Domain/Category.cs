@@ -6,13 +6,26 @@ using System.Threading.Tasks;
 
 namespace HotelApp.Domain
 {
+    /// <summary>
+    /// Класс для работы с категориями номеров
+    /// </summary>
     public record Category
     {
-        public long CategoryId { get; set; } // Первичный ключ
-        public string CategoryName { get; set; } // Название категории
-        public decimal PricePerNight { get; set; } // Стоимость за ночь
-
-        // Навигационное свойство
+        /// <summary>
+        /// Первичный ключ
+        /// </summary>
+        public long CategoryId { get; set; } 
+        /// <summary>
+        /// Название категории
+        /// </summary>
+        public string CategoryName { get; set; }
+        /// <summary>
+        /// Стоимость за ночь
+        /// </summary>
+        public decimal PricePerNight { get; set; }
+        /// <summary>
+        /// Навигационное свойство
+        /// </summary>
         public ICollection<Room> Rooms { get; set; }
     }
 }
