@@ -50,19 +50,19 @@ namespace HotelApp.Application.Services
             return mapper.Map<BookingServiceDto>(result); 
         }
         /// <summary>
-        /// 
+        /// Получение списка услуг бронирования
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Коллекция dto услуг бронирования</returns>
         public async Task<IReadOnlyCollection<BookingServiceDto>> GetBookingServices()
         {
             var result = await bookingServRepository.GetBookingServices();
             return mapper.Map<IReadOnlyCollection<BookingServiceDto>>(result);
         }
         /// <summary>
-        /// 
+        /// Редактирование услуги бронирования
         /// </summary>
         /// <param name="bookingServ"></param>
-        /// <returns></returns>
+        /// <returns>Асинхронная операция</returns>
         public async Task Update(BookingServiceDto bookingServ)
         {
             var entity = mapper.Map<Domain.BookingService>(bookingServ);
