@@ -3,8 +3,16 @@ using HotelApp.Domain;
 
 namespace HotelApp.Infrastructure
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
     public class MyDbContext: DbContext
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MyDbContext"/> class.
+        /// </summary>
+        /// <param name="options">The options.</param>
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { 
         
         }

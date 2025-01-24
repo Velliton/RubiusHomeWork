@@ -10,8 +10,15 @@ using HotelApp.Application.Models;
 
 namespace HotelApp.Application.Mapping
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="AutoMapper.Profile" />
     public class ApplicationMappingProfile : Profile
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApplicationMappingProfile"/> class.
+        /// </summary>
         public ApplicationMappingProfile()
         {
             CreateMap<Client, ClientDto>();

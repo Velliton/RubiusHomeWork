@@ -9,8 +9,19 @@ using Microsoft.Extensions.Options;
 
 namespace HotelApp.Infrastructure
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="Microsoft.EntityFrameworkCore.Design.IDesignTimeDbContextFactory&lt;HotelApp.Infrastructure.MyDbContext&gt;" />
     public class MyDbContextFatory : IDesignTimeDbContextFactory<MyDbContext>
     {
+        /// <summary>
+        /// Creates a new instance of a derived context.
+        /// </summary>
+        /// <param name="args">Arguments provided by the design-time service.</param>
+        /// <returns>
+        /// An instance of <typeparamref name="TContext" />.
+        /// </returns>
         public MyDbContext CreateDbContext(string[] args) 
         {
         var optionsBuilder = new DbContextOptionsBuilder<MyDbContext>();

@@ -24,7 +24,12 @@ namespace HotelApp.Domain
         /// </summary>
         public decimal Price { get; set; }
 
-        // Навигационное свойство
+        /// <summary>
+        /// Gets or sets the booking services. Navigation propertie.
+        /// </summary>
+        /// <value>
+        /// The booking services.
+        /// </value>
         public ICollection<BookingService> BookingServices { get; set; }
     }
 }

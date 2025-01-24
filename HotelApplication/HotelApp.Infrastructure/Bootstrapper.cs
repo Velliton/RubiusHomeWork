@@ -5,8 +5,16 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace HotelApp.Infrastructure
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Bootstrapper
     {
+        /// <summary>
+        /// Adds the infrastructure.
+        /// </summary>
+        /// <param name="services">The services.</param>
+        /// <returns></returns>
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             var connectionString = "Host=localhost;Database=hotelDb;Username=postgres;Password=1qaz!QAZ";

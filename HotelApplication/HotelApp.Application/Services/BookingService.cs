@@ -82,12 +82,15 @@ namespace HotelApp.Application.Services
             return;
         }
 
+        /// <summary>Determines whether [is room available asynchronous] [the specified room identifier].</summary>
+        /// <param name="roomId">The room identifier.</param>
+        /// <param name="startDate">The start date.</param>
+        /// <param name="endDate">The end date.</param>
+        /// <returns>
+        ///   <c>true</c> if [is room available asynchronous] [the specified room identifier]; otherwise, <c>false</c>.</returns>
         public async Task<bool> IsRoomAvailableAsync(int roomId, DateTime startDate, DateTime endDate)
         {
-            // Получаем все бронирования для указанной комнаты
             var bookings = await bookingRepository.GetBookingsByRoomIdAsync(roomId);
-
-            // Проверяем пересечения дат
             return !bookings.Any(b => b.CheckInDate < endDate && b.CheckOutDate > startDate);
         }
 
